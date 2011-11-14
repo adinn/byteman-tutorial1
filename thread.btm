@@ -1,0 +1,6 @@
+RULE trace thread start
+CLASS java.lang.Thread
+METHOD start()
+IF true
+DO traceln("*** start for thread " + $0.getName())
+ENDRULE

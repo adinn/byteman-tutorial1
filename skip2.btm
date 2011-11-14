@@ -1,0 +1,8 @@
+RULE skip loop iteration
+CLASS AppMain2
+METHOD main
+AFTER CALL join
+IF ($args[$i]).contains("foo")
+DO $i = $i + 1 ;
+   traceln("skipping iteration " + $i)
+ENDRULE
